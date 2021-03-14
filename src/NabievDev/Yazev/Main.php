@@ -8,25 +8,15 @@ use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
 
-/**
- * Class Main
- * @package NabievDev\yazev
- */
 class Main extends PluginBase
 {
-    /**
-     * onEnable()
-     */
-    public function onEnable()
+    public function onEnable() : void
     {
         Server::getInstance()->getCommandMap()->register("yazevkitstart", new YazevKitStart("yazevkitstart", "Yazev my crash <3"));
         $this->getLogger()->info("§b[YazevKitStart] §7Данный плагин является форком шуточного плагина от Набиева");
     }
 
-    /**
-     * @param Player $player
-     */
-    public static function giveKit(Player $player)
+    public static function giveKit(Player $player) : void
     {
         $player->getArmorInventory()->setHelmet(Item::get(Item::IRON_HELMET, 0, 1)->setCustomName("§bШлем"));
         $player->getArmorInventory()->setChestplate(Item::get(Item::IRON_CHESTPLATE, 0, 1)->setCustomName("§bГрудак"));
@@ -35,7 +25,8 @@ class Main extends PluginBase
         $player->getInventory()->setItem(0, Item::get(Item::STONE_SWORD, 0, 1)->setCustomName("§bПалочка-ебалочка Пети"));
         //Кому надо еще что-то или что-то переделать, то делайте сами, мне впадлу)
     }
-    public static function giveCUM(Player $player)
+
+    public static function giveCUM(Player $player) : void
     {
         $player->getInventory()->setItem(0, Item::get(Item::SUGAR, 0, 1)->setCustomName("My CUM"));
     }
