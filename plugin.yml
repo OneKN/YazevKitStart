@@ -1,6 +1,5 @@
-name: VovaKitStart
-main: NabievDev\vovakit\Main
-api: 3.14.0
-version: 1.0
+name: YazevKitStart
+main: NabievDev\Yazev\Main
+api: 3.0.0
+version: 1.1
 author: NabievDev
-site: vk.com/fuckingcoder
