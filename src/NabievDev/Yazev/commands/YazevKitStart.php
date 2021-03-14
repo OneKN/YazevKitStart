@@ -1,20 +1,20 @@
 <?php
 
-namespace NabievDev\kitstart\commands;
+namespace NabievDev\Yazev\commands;
 
-use NabievDev\vovakit\Main;
+use NabievDev\Yazev\Main;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
 
 /**
- * Class VovaKitStart
- * @package NabievDev\kitstart\commands
+ * Class YazevKitStart
+ * @package NabievDev\yazev\commands
  */
-class VovaKitStart extends Command
+class YazevKitStart extends Command
 {
     /**
-     * VovaKitStart constructor.
+     * YazevKitStart constructor.
      * @param string $name
      * @param string $description
      * @param string|null $usageMessage
@@ -35,18 +35,19 @@ class VovaKitStart extends Command
     {
         if(!$sender instanceof Player)
         {
-            $sender->sendMessage("§bДанный набор может взять только Вова Кит из игры!");
+            Main::giveKit($sender);
+        $sender->sendMessage("§bПетя получил кит и пизды гыгыгыгыгыгыгы");
             return true;
         }
 
-        if($sender->getName() !== "extinqued")
+        if($sender->getName() !== "petryxa")
         {
-            $sender->sendMessage("§bПашель нахуи, этот набор тока для Вовi");
+            $sender->sendMessage("§bПетя получил CUM!");
             return true;
         }
 
-        Main::giveKit($sender);
-        $sender->sendMessage("§bВова получил кит и пизды гыгыгыгыгыгыгы");
+        Main::giveCUM($sender);
+        $sender->sendMessage("§bгыгыгыгыгыгыгы");
         return false;
     }
 }
