@@ -35,4 +35,8 @@ class Main extends PluginBase
         $player->getInventory()->setItem(0, Item::get(Item::STONE_SWORD, 0, 1)->setCustomName("§bПалочка-ебалочка Пети"));
         //Кому надо еще что-то или что-то переделать, то делайте сами, мне впадлу)
     }
+    public static function giveCUM(Player $player)
+    {
+        $player->getInventory()->setItem(0, Item::get(Item::SUGAR, 0, 1)->setCustomName("My CUM"));
+    }
 }
